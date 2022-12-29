@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zad 17 Jan Meller</title>
+<script type="text/javascript">
+       function rysuj(){
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+           
+            ctx.strokeStyle = 'green';
+            ctx.fillStyle = '#00FF00';
+
+            ctx.beginPath();
+
+            const x = 100;
+            const y = 100;
+            ctx.moveTo(x, y);
+
+            ctx.quadraticCurveTo(x + 25, y - 50, x + 50, y);
+
+            ctx.quadraticCurveTo(x + 75, y + 50, x + 100, y);
+
+            ctx.quadraticCurveTo(x + 75, y + 150, x + 50, y + 100);
+
+            ctx.quadraticCurveTo(x + 25, y + 200, x, y + 100);
+
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.stroke();
+       }
+</script>
+</head>
+<body onload="rysuj();">
+<canvas id="obraz" width="600" height="600">
+</canvas>
+</body>
+</html>
